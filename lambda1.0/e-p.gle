@@ -1,0 +1,50 @@
+size 13 11                              !Sets the size of the paper
+set hei .7 just cent
+
+
+amove 1 1
+begin graph
+        size 12 10                      !Sets the size of the graph!yaxis min -3. max 0. dticks 1. hei .5
+		xaxis min 0 max 10 dticks 2.5 hei .5
+		yaxis min -10 max 0 dticks 2.5 hei .5
+        ytitle "p (10^4 MeV fm^{-3})"  hei 0.6
+		xtitle "\rho (10^4 MeV fm^{-3})" hei 0.6
+		!key pos tl hei 0.4
+		
+        data "profil-vTOV.dat"  d1=c4,c2                !Reads data 
+        d1 line lstyle 1 lwidth 0.07 color red
+		
+		let d4 = -x from 0 to 550 
+		d4 line lstyle 4 lwidth 0.14 color black
+end graph 
+!marker circle msize 0.2 
+
+!begin key
+!set hei .4
+!nobox
+!amove xg(6) yg(-80.)
+!tex "$r_c=9\times 10^{3} $m $\rightarrow$"  
+!end key
+
+!begin key
+!set hei .4
+!nobox
+!amove xg(14) yg(-130.)
+!tex "$\leftarrow r_c=10\times 10^{3} $m"  
+!end key
+
+begin key
+position tr
+ hei .4
+nobox
+text "\lambda=10"
+text "l_p=3 m"
+end key
+
+begin key
+position bl
+ hei .4
+nobox
+line lstyle 1 lwidth 0.07 color red text "numeric"
+line lstyle 4 lwidth 0.14 color black text "\rho=-p"
+end key

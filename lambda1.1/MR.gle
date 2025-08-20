@@ -1,0 +1,39 @@
+size 13 21                              !Sets the size of the paper
+
+set hei .7 just cent
+!set texlabels 1
+
+amove 2 12
+begin graph
+        size 12 10                      !Sets the size of the graph
+        data radmass-vTOV.dat  d1=c6,c4  !d2=c1,c3                !Reads data 
+		!yaxis min 0.35 max 0.8 dticks 0.1 hei .5
+		!xaxis min 17 max 33 dticks 4 hei .5
+        xtitle "R-r_c (10^{-1} km)"  hei 1.
+		ytitle "M (M_{\odot})" hei 1.
+        d1 line lstyle 1 lwidth 0.07 color blue
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+begin key
+position br
+ hei .4
+nobox
+text "\lambda=..."
+text "l_p=..."
+text "r_c=..."
+end key
+
+amove 2 1
+begin graph
+        size 12 10                      !Sets the size of the graph
+        data radmass-vTOV.dat  d1=c1,c4  !d2=c1,c4                !Reads data 
+		!yaxis min 0.35 max 0.8 dticks 0.1 hei .5
+		!xaxis min 17 max 33 dticks 4 hei .5
+        xtitle "p_c (MeV fm^{-3})"  hei 1.
+		ytitle "C=GM/R" hei 1.
+        d1 line lstyle 1 lwidth 0.07 color blue
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 

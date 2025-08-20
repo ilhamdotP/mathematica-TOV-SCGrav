@@ -1,0 +1,148 @@
+size 24 20                              !Sets the size of the paper
+set texlabels 1
+amove 0.5 10.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+		data "profil-v1_w0.33.dat"  d10=c1,c2 
+		data "profil-v1_w1.dat"  d11=c1,c2 
+		data "profil-vTOV_w0.33.dat"  d12=c1,c2 
+		data "profil-vTOV_w1.dat"  d13=c1,c2 
+		yaxis min 0 max 300 dticks 100 hei .5
+		xaxis min 0 max 15 dticks 5 hei .5
+        ytitle "$p$ (MeV fm$^{-3}$)"  hei .5
+		xtitle "$r$ (km)" hei .5
+		d12 line lstyle 1 lwidth 0.03 color black
+		d13 line lstyle 1 lwidth 0.03 color black
+		d10 line lstyle 8 lwidth 0.07 color magenta
+		d11 line lstyle 9 lwidth 0.07 color green
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+set just bc
+amove xg(6.5) yg(40)
+tex "$w$=$1/3$" !add 0.1 name sq5b
+
+set just bc
+amove xg(12.) yg(75)
+tex "$w$=$1$" !add 0.1 name sq5b
+
+begin key
+position tr
+ hei .4
+nobox
+line lstyle 1 color  black lwidth 0.03 text "TOV"
+text "$l_p=1$ mm"
+text "$\alpha=20$"
+text "$B$=($145$ MeV)$^4$"
+end key
+
+
+amove 12. 10.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+		data "profil-v1_w0.33.dat"  d10=c1,c3 
+		data "profil-v1_w1.dat"  d11=c1,c3 
+		data "profil-vTOV_w0.33.dat"  d12=c1,c3 
+		data "profil-vTOV_w1.dat"  d13=c1,c3 
+		yaxis min 0 max 3.3 dticks 1 hei .5
+		xaxis min 0 max 15 dticks 5 hei .5
+        ytitle "$m$ $(M_\odot)$"  hei .5
+		xtitle "$r$ (km)" hei .5
+		d12 line lstyle 1 lwidth 0.03 color black
+		d13 line lstyle 1 lwidth 0.03 color black
+		d10 line lstyle 8 lwidth 0.07 color magenta
+		d11 line lstyle 9 lwidth 0.07 color green
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+set just bc
+amove xg(3.5) yg(0.5)
+tex "$w$=$1/3$" !add 0.1 name sq5b
+
+set just bc
+amove xg(9.5) yg(0.7)
+tex "$w$=$1$" !add 0.1 name sq5b
+
+amove 15. 15.5
+begin graph
+        size 4 3                      !Sets the size of the graph
+		data "profil-v1_w0.33_inset.dat"  d10=c1,c4 
+		data "profil-v1_w1_inset.dat"  d11=c1,c4  
+		yaxis min 0 max 0.4 dticks .2 hei .4
+		xaxis min 0 max 15 dticks 7.5 hei .4
+        ytitle "$1-m/m_{TOV}$ (\%)"  hei .4
+		xtitle "$r$ (km)" hei .4
+		d10 line lstyle 8 lwidth 0.07 color magenta
+		d11 line lstyle 9 lwidth 0.07 color green
+		!key pos tl hei 0.4
+end graph 
+
+
+
+amove 0.5 0.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+		data "profil-v1_w0.33.dat"  d10=c1,c4 
+		data "profil-v1_w0.33.dat"  d11=c1,c5 
+		data "profil-vTOV_w0.33.dat"  d12=c1,c4 
+		data "profil-vTOV_w0.33.dat"  d13=c1,c5 
+		yaxis min 0 max 1 dticks .33 hei .5
+		xaxis min 0 max 12 dticks 4 hei .5
+		xtitle "$r$ (km)" hei .5
+		d12 line lstyle 1 lwidth 0.03 color black
+		d13 line lstyle 1 lwidth 0.03 color black
+		d10 line lstyle 8 lwidth 0.07 color magenta
+		d11 line lstyle 8 lwidth 0.07 color magenta
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+set just bc
+amove xg(3.4) yg(0.15)
+tex "$\exp(\nu)$" !add 0.1 name sq5b
+
+set just bc
+amove xg(7.5) yg(0.75)
+tex "$1-2Gm/r$" !add 0.1 name sq5b
+
+begin key
+position br
+ hei .4
+nobox
+text "$w$=$1/3$"
+end key
+
+amove 12. 0.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+		data "profil-v1_w1.dat"  d10=c1,c4 
+		data "profil-v1_w1.dat"  d11=c1,c5 
+		data "profil-vTOV_w1.dat"  d12=c1,c4 
+		data "profil-vTOV_w1.dat"  d13=c1,c5 
+		yaxis min 0 max 1 dticks .33 hei .5
+		xaxis min 0 max 15 dticks 5 hei .5
+        xtitle "$r$ (km)" hei .5
+		d12 line lstyle 1 lwidth 0.03 color black
+		d13 line lstyle 1 lwidth 0.03 color black
+		d10 line lstyle 9 lwidth 0.07 color green
+		d11 line lstyle 9 lwidth 0.07 color green
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+set just bc
+amove xg(3.4) yg(0.1)
+tex "$\exp(\nu)$" !add 0.1 name sq5b
+
+set just bc
+amove xg(6.) yg(0.65)
+tex "$1-2Gm/r$" !add 0.1 name sq5b
+
+begin key
+position br
+ hei .4
+nobox
+text "$w$=1"
+end key
