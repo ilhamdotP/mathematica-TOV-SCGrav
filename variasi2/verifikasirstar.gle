@@ -1,0 +1,80 @@
+size 12 21                              !Sets the size of the paper
+
+amove 0.5 0.5
+begin graph
+        size 12 7                      !Sets the size of the graph
+        data "profil-vSCGrav_verif.dat"  d1=c1,c2 
+		data "profil-vTOV_verif.dat" d2=c1,c2
+		yaxis hei .55 min 0 max 24 dticks 6 
+		xaxis hei .55 min 0 max 0.6 dticks 0.2
+        ytitle "p (10^{15} MeV fm^{-3})"  hei .55
+		xtitle "r (m)" hei .55
+        d1 line lstyle 1 lwidth 0.07 color orange
+        d2 line lstyle 3 lwidth 0.07 color green
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+
+begin key
+position tr 
+nobox
+hei .5
+text "l_p=1 mm, \alpha=10"
+text "B=(145 MeV)^4\times 10^9, w=\infty"
+text "p_c=230\times 10^{14} MeV fm^{-3}"
+end key
+
+amove 0.5 7.5
+begin graph
+        size 12 7                      !Sets the size of the graph
+        data "profil-vSCGrav_verif.dat"  d1=c1,c3 
+		data "profil-vTOV_verif.dat" d2=c1,c3
+		yaxis hei .55 !min 0 max 0.1 dticks 0.025 
+		xaxis hei .55 min 0 max 0.6 dticks 0.2
+        ytitle "m (10^{-4} M_{\odot})"  hei .55
+		xtitle "r (m)" hei .55
+		
+        d1 line lstyle 1 lwidth 0.07 color orange
+        d2 line lstyle 3 lwidth 0.07 color green
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+begin key
+position tl
+ hei .45
+nobox
+line lstyle 1 color  orange lwidth 0.07 text "2GM/R=0.890161>BL"
+line lstyle 3 color  green lwidth 0.07 text "2GM/R=0.888916>BL"
+text "BL (Buchdahl limit)=8/9"
+end key
+
+amove 0.5 14.5
+begin graph
+        size 12 7                      !Sets the size of the graph
+        data "eksak-rstar.dat"  d1=c1,c2 
+		data "TOV-rstar.dat" d2=c1,c2
+		yaxis hei .55 min -410 max 0 dticks 100
+		xaxis hei .55 min 0 max 0.6 dticks 0.2
+        ytitle "r_{*} (m)"  hei .55
+		xtitle "r (m)" hei .55
+        d1 line lstyle 1 lwidth 0.07 color orange
+        d2 line lstyle 3 lwidth 0.07 color green
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+
+
+begin key
+position br
+ hei .45
+nobox
+line lstyle 1 color  orange lwidth 0.07 text "SCGrav"
+line lstyle 3 color  green lwidth 0.07 text "TOV GR"
+end key
+
+
+
+
