@@ -1,0 +1,70 @@
+size 12 22                              !Sets the size of the paper
+
+amove 0.5 0.5
+begin graph
+        size 12 7                      !Sets the size of the graph
+        data "TOV-reverse-5.1.dat"  d1=c1,c2 
+		data "TOV-reverse-5.1.dat" d2=c1,c3
+		yaxis hei .5 min 0 max 25 dticks 6 
+		xaxis hei .5 min -200 max 0 dticks 50 
+        ytitle "p (10^{15} MeV fm^{-3})"  hei .5
+		xtitle "r_{*} (10^2 km)" hei .5
+        d1 line lstyle 1 lwidth 0.07 color magenta
+        d2 line lstyle 2 lwidth 0.07 color blue
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+
+
+amove 0.5 7.5
+begin graph
+        size 12 7                      !Sets the size of the graph
+        data "TOV-reverse-5.1.dat"  d1=c1,c6 
+		data "TOV-reverse-5.1.dat" d2=c1,c7
+		yaxis hei .5 min 0 max 0.1 dticks 0.025 
+		xaxis hei .5 min -200 max 0 dticks 50 
+        ytitle "Exp(\nu) (10^{-12})"  hei .5
+		xtitle "r_{*} (10^2 km)" hei .5
+		
+        d1 line lstyle 1 lwidth 0.07 color magenta
+        d2 line lstyle 2 lwidth 0.07 color blue
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+begin key
+position tl
+ hei .4
+nobox
+line lstyle 1 color  magenta lwidth 0.07 text "Backward"
+line lstyle 2 color  blue lwidth 0.07 text "Forward"
+end key
+
+amove 0.5 14.5
+begin graph
+        size 12 7                      !Sets the size of the graph
+        data "TOV-reverse-5.1.dat"  d1=c1,c8 
+		data "TOV-reverse-5.1.dat" d2=c1,c9
+		yaxis hei .5 min 0 max 10 dticks 2.5 
+		xaxis hei .5 min -200 max 0 dticks 50
+        ytitle "r (m)"  hei .5
+		xtitle "r_{*} (10^2 km)" hei .5
+        d1 line lstyle 1 lwidth 0.07 color magenta
+        d2 line lstyle 2 lwidth 0.07 color blue
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+
+
+begin key
+position tl 
+nobox
+hei .4
+text "\alpha=0.05 m"
+text "2GM=10 m"
+text "k=0.9999999999728"
+text "\rho_0=18.076/(8\pi G) MeV/fm^3"
+end key
+

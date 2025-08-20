@@ -1,0 +1,91 @@
+size 22 19                              !Sets the size of the paper
+
+amove 0.5 9.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+        data "TOV-reverse-5.0.1a.dat"  d1=c5,c2 
+		data "TOV-reverse-5.0.1.dat"  d2=c5,c2
+		yaxis hei .5 min 0 max 24 dticks 6 
+		xaxis hei .5 min 0 max 16 dticks 4
+        ytitle "p (10^{15} MeV fm^{-3})"  hei .5
+		xtitle "r (m)" hei .5
+        d1 line lstyle 1 lwidth 0.07 color magenta
+        d2 line lstyle 2 lwidth 0.07 color red
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+
+
+begin key
+position tr 
+nobox
+hei .4
+text "l_p^2=0.05 m"
+text "8\pi G\rho_0=18.076 m^{-2}"
+text "p_c=2.29322\times 10^{16} MeV fm^{-3}"
+end key
+
+
+
+
+amove 0.5 0.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+        data "TOV-reverse-5.0.1a.dat"  d1=c5,c3 
+		data "TOV-reverse-5.0.1.dat"  d2=c5,c3
+		yaxis hei .5 min -7 max 0.1 dticks 2
+		xaxis hei .5 min 0 max 16 dticks 4
+        ytitle "m (M_{\odot})"  hei .5
+		xtitle "r (m)" hei .5
+        d1 line lstyle 1 lwidth 0.07 color magenta
+        d2 line lstyle 2 lwidth 0.07 color red
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+amove 11 0.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+        data "TOV-reverse-5.0.1a.dat"  d1=c5,c1 
+		data "TOV-reverse-5.0.1.dat"  d2=c5,c1
+		yaxis hei .5 min -210 max 25 dticks 50 
+		xaxis hei .5 min 0 max 16 dticks 4
+        ytitle "r_* (100 km)"  hei .5
+		xtitle "r (m)" hei .5
+        d1 line lstyle 1 lwidth 0.07 color magenta
+        d2 line lstyle 2 lwidth 0.07 color red
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+begin key
+position br 
+nobox
+hei .4
+line lstyle 1 lwidth 0.07 color magenta text "2GM/R=0.999986"
+line lstyle 2 lwidth 0.07 color red     text "2GM/R=0.999943"
+end key
+
+amove 11 9.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+        data "TOV-reverse-5.0.1a.dat"  d1=c5,c4 
+		data "TOV-reverse-5.0.1.dat"  d2=c5,c4
+		yaxis hei .5 min -46 max -23 dticks 6 
+		xaxis hei .5 min 0 max 16 dticks 4
+        ytitle "\nu"  hei .5
+		xtitle "r (m)" hei .5
+        d1 line lstyle 1 lwidth 0.07 color magenta
+        d2 line lstyle 2 lwidth 0.07 color red
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+begin key
+position br 
+nobox
+hei .4
+line lstyle 1 lwidth 0.07 color magenta text "Ho-Matsuo"
+line lstyle 2 lwidth 0.07 color red     text "TOV GR"
+end key
